@@ -18,7 +18,7 @@ export default function Features() {
   return (
     <>
       {/* Features heading */}
-      <section>
+      <section id="features">
         <div className="container mx-auto mt-8 px-6">
           <h2 className="mb-4 text-4xl font-semibold text-center">Features</h2>
           <p className="max-w-md mx-auto text-center text-gray-400">
@@ -77,7 +77,7 @@ export default function Features() {
                   <div className="mx-auto md:mx-0">
                     <a
                       href="#"
-                      className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
+                      className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-blue-500 hover:border-blue-500 hover:border-2"
                     >
                       More Info
                     </a>
@@ -108,9 +108,9 @@ export default function Features() {
                     bookmarks.
                   </p>
                   <div className="mx-auto md:mx-0">
-                    <a
+                  <a
                       href="#"
-                      className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
+                      className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-blue-500 hover:border-blue-500 hover:border-2"
                     >
                       More Info
                     </a>
@@ -141,9 +141,9 @@ export default function Features() {
                     button.
                   </p>
                   <div className="mx-auto md:mx-0">
-                    <a
+                  <a
                       href="#"
-                      className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
+                      className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-blue-500 hover:border-blue-500 hover:border-2"
                     >
                       More Info
                     </a>
