@@ -1,18 +1,45 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import LoadingBar from "react-top-loading-bar";
 import Image from "next/image";
+import Link from "next/link";
 import navIcon from "@/public/images/logo-bookmark.svg";
 
 export default function Header() {
+  // State for mobile menu
   const [menuOpen, setMenuOpen] = useState(false);
+  // State for loading bar
+  const [progress, setProgress] = useState(0);
+
+  // Get current path
+  const pathname = usePathname();
 
   const navToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Update progress based on pathname
+  useEffect(() => {
+    setProgress(30);
+
+    setTimeout(() => {
+      setProgress(70);
+    }, 100);
+
+    setTimeout(() => {
+      setProgress(100);
+    }, 800);
+  }, [pathname]);
+
   return (
     <header className="container relative mx-auto p-6">
       <nav className="flex items-center justify-between space-x-20 my-6">
+        <LoadingBar
+          color="#6028ff"
+          progress={progress}
+          onLoaderFinished={() => setProgress(0)}
+        />
         {/* Logo */}
         <div className="z-30">
           <Image src={navIcon} width={200} height={100} alt="Logo" />
@@ -20,7 +47,7 @@ export default function Header() {
 
         {/* Desktop Menu Items */}
         <div className="hidden items-center space-x-10 uppercase text-gray-500 md:flex">
-          <NavLink href="#features">Features</NavLink>
+          <NavLink href={"/blog"}>Features</NavLink>
           <NavLink href="#download">Download</NavLink>
           <NavLink href="#faq">FAQ</NavLink>
           <NavLink
@@ -71,11 +98,11 @@ function NavLink({ href, children, mobile, className = "" }) {
   const mobileClasses = "w-full py-3 text-center block hover:text-red-500";
 
   return (
-    <a
+    <Link
       href={href}
       className={`${mobile ? mobileClasses : baseClasses} ${className}`}
     >
       {children}
-    </a>
+    </Link>
   );
 }
