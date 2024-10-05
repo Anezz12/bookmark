@@ -108,7 +108,7 @@ export default function Features() {
                     bookmarks.
                   </p>
                   <div className="mx-auto md:mx-0">
-                  <a
+                    <a
                       href="#"
                       className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-blue-500 hover:border-blue-500 hover:border-2"
                     >
@@ -141,7 +141,7 @@ export default function Features() {
                     button.
                   </p>
                   <div className="mx-auto md:mx-0">
-                  <a
+                    <a
                       href="#"
                       className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-blue-500 hover:border-blue-500 hover:border-2"
                     >
