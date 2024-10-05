@@ -41,7 +41,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header>
+    <header className="container mx-auto p-6">
       <nav className="flex items-center justify-between space-x-20 my-6">
         <LoadingBar
           color="#6028ff"
