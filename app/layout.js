@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "../components/Header";
+import LogoWa from "../components/ui/LogoWa";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body className="overflow-x-hidden ">
         <Header />
         {children}
+        <LogoWa />
       </body>
     </html>
   );
