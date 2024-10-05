@@ -22,11 +22,11 @@ export default function Header() {
   const handleNavLinkClick = (e, href) => {
     e.preventDefault();
     closeMenu();
-    
+
     // Scroll to the target section
     const targetElement = document.querySelector(href);
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -41,7 +41,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="container relative mx-auto p-6">
+    <header>
       <nav className="flex items-center justify-between space-x-20 my-6">
         <LoadingBar
           color="#6028ff"
@@ -51,6 +51,7 @@ export default function Header() {
         <div className="z-30">
           <Image src={navIcon} width={200} height={100} alt="Logo" />
         </div>
+        <div></div>
         <div className="hidden items-center space-x-10 uppercase text-gray-500 md:flex">
           <NavLink href="#features">Features</NavLink>
           <NavLink href="#download">Download</NavLink>
@@ -76,16 +77,32 @@ export default function Header() {
       </nav>
       {menuOpen && (
         <div className="fixed inset-0 z-20 flex flex-col items-center self-end w-full h-full max-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-blue-900">
-          <NavLink href="#features" mobile onClick={(e) => handleNavLinkClick(e, "#features")}>
+          <NavLink
+            href="#features"
+            mobile
+            onClick={(e) => handleNavLinkClick(e, "#features")}
+          >
             Features
           </NavLink>
-          <NavLink href="#download" mobile onClick={(e) => handleNavLinkClick(e, "#download")}>
+          <NavLink
+            href="#download"
+            mobile
+            onClick={(e) => handleNavLinkClick(e, "#download")}
+          >
             Download
           </NavLink>
-          <NavLink href="#faq" mobile onClick={(e) => handleNavLinkClick(e, "#faq")}>
+          <NavLink
+            href="#faq"
+            mobile
+            onClick={(e) => handleNavLinkClick(e, "#faq")}
+          >
             FAQ
           </NavLink>
-          <NavLink href="#login" mobile onClick={(e) => handleNavLinkClick(e, "#login")}>
+          <NavLink
+            href="#login"
+            mobile
+            onClick={(e) => handleNavLinkClick(e, "#login")}
+          >
             Login
           </NavLink>
         </div>
