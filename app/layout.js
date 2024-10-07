@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "../components/Header";
 import LogoWa from "../components/ui/LogoWa";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <LogoWa />
+        <Footer />
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ function Logo() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollHeight = window.pageYOffset;
-      if (scrollHeight > 200) {
+      if (scrollHeight > 100) {
         setShowButton(true);
       } else {
         setShowButton(false);

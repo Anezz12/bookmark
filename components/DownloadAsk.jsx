@@ -3,14 +3,15 @@ export default function DownloadAsk() {
     <>
     {/* // <!-- Download Heading --> */}
     <section id="download">
-      <div class="container mx-auto px-6">
-        <h2 class="mb-6 text-3xl font-semibold text-center md:text-4xl">
+      <div className="container mx-auto px-6">
+        <h2 className="mb-6 text-3xl font-semibold text-center md:text-4xl">
           Download the extension
         </h2>
-        <p class="max-w-lg mx-auto text-center text-grayishBlue">
+        <p className="max-w-lg mx-auto text-center text-grayishBlue">
           We've got more browsers in the pipeline. Please do let us know if
-          you've got a favourite you'd like us to prioritize.
+          you've got a favorite you'd like us to prioritize.
         </p>
+        <h1></h1>
       </div>
     </section>
     <section id="download-boxes">
@@ -57,7 +58,7 @@ export default function DownloadAsk() {
             <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
               <a
                 href="#"
-                className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-blue-500 hover:text-blue-500 hover:bg-white border-softBlue"
+                className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-blue-500 hover:text-blue-500     hover:bg-white border-softBlue"
                 >Add & Install Extension</a
               >
             </div>
@@ -90,5 +91,6 @@ export default function DownloadAsk() {
       </div>
     </section>
     </>
-  )
+
+   )
 }
