@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className="overflow-x-hidden ">
         <Header />
-        {children}
+        <main>{children}</main>
         <LogoWa />
         <Footer />
       </body>
