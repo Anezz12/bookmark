@@ -10,7 +10,7 @@ export default function Features() {
     { id: "easy", label: "Easy Sharing" },
   ];
 
-  const handleTabClick = (tabId) => {
+    const handleTabClick = (tabId) => {
     setActiveTab(tabId);
   };
 

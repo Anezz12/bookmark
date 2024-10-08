@@ -1,27 +1,28 @@
+"use client";
+import { useCountUp } from "react-countup";
+
 export default function Newsletter() {
-    return (
-        <section id="newsletter" className="bg-blue-500">
+  useCountUp({
+    start: 0,
+    end: 35000,
+    duration: 2,
+    ref: "counter",
+  });
+  return (
+    <section id="newsletter" className="bg-blue-500">
       {/* <!-- Main Container --> */}
       <div className="max-w-lg mx-auto py-24">
-        <p
-          className="mb-6 text-lg tracking-widest text-center text-white uppercase"
-        >
-          35,000+ Already Joined
+        <p className="mb-6 text-lg tracking-widest text-center text-white uppercase">
+          <span id="counter" />+ Already Joined
         </p>
-        <h2
-          className="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl"
-        >
+        <h2 className="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl">
           Stay up-to-date with what we're doing
         </h2>
 
         {/* <!-- Form --> */}
-        <form
-          className="flex flex-col items-start justify-center max-w-2xl mx-auto space-y-6 text-base px-6 md:flex-row md:space-y-0 md:space-x-4 md:px-0"
-        >
+        <form className="flex flex-col items-start justify-center max-w-2xl mx-auto space-y-6 text-base px-6 md:flex-row md:space-y-0 md:space-x-4 md:px-0">
           {/* <!-- Input & Button Container --> */}
-          <div
-            className="flex flex-col justify-between items-center mx-auto md:flex-row md:mx-0"
-          >
+          <div className="flex flex-col justify-between items-center mx-auto md:flex-row md:mx-0">
             <input
               type="text"
               className="flex-1 px-6 pt-3 pb-2 mb-4 rounded-lg border-1 border-white focus:outline-none md:mr-3 md:mb-0"
@@ -37,5 +38,5 @@ export default function Newsletter() {
         </form>
       </div>
     </section>
-    )
+  );
 }

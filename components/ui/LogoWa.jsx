@@ -21,9 +21,8 @@ function Logo() {
 
   return (
     <div
-      className={`fixed bottom-4 right-4 z-50 transition-opacity duration-300 ${
-        showButton ? "opacity-100" : "opacity-0"
-      }`}
+      className={`fixed bottom-4 right-4 z-50 transition-opacity duration-300 ${showButton ? "opacity-100" : "opacity-0"
+        }`}
     >
       <a
         href="https://api.whatsapp.com/send?phone=6281230498560"

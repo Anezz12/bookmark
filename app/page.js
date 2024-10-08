@@ -11,7 +11,7 @@ export default function Home() {
       <Features />
       <DownloadAsk />
       <Asked />
-      <Newsletter/>
+      <Newsletter />
     </>
   );
 }

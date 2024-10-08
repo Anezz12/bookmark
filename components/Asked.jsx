@@ -40,9 +40,8 @@ export default function Asked() {
               </div>
               {/* Arrow */}
               <div
-                className={`transition duration-500 ease ${
-                  openTab === 1 ? "rotate-180 text-red-500" : ""
-                }`}
+                className={`transition duration-500 ease ${openTab === 1 ? "rotate-180 text-red-500" : ""
+                  }`}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
@@ -57,9 +56,8 @@ export default function Asked() {
 
             {/* Tab Inner Content */}
             <div
-              className={`overflow-hidden transition duration-500 ease ${
-                openTab === 1 ? "max-h-screen" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition duration-500 ease ${openTab === 1 ? "max-h-screen" : "max-h-0"
+                }`}
             >
               <p className="py-2 text-justify text-gray-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
@@ -83,9 +81,8 @@ export default function Asked() {
               </div>
               {/* Arrow */}
               <div
-                className={`transition duration-500 ease ${
-                  openTab === 2 ? "rotate-180 text-red-500" : ""
-                }`}
+                className={`transition duration-500 ease ${openTab === 2 ? "rotate-180 text-red-500" : ""
+                  }`}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
@@ -100,9 +97,8 @@ export default function Asked() {
 
             {/* Tab Inner Content */}
             <div
-              className={`overflow-hidden transition duration-500 ease ${
-                openTab === 2 ? "max-h-screen" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition duration-500 ease ${openTab === 2 ? "max-h-screen" : "max-h-0"
+                }`}
             >
               <p className="py-2 text-justify text-gray-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
@@ -126,9 +122,8 @@ export default function Asked() {
               </div>
               {/* Arrow */}
               <div
-                className={`transition duration-500 ease ${
-                  openTab === 3 ? "rotate-180 text-red-500" : ""
-                }`}
+                className={`transition duration-500 ease ${openTab === 3 ? "rotate-180 text-red-500" : ""
+                  }`}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
@@ -143,9 +138,8 @@ export default function Asked() {
 
             {/* Tab Inner Content */}
             <div
-              className={`overflow-hidden transition duration-500 ease ${
-                openTab === 3 ? "max-h-screen" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition duration-500 ease ${openTab === 3 ? "max-h-screen" : "max-h-0"
+                }`}
             >
               <p className="py-2 text-justify text-gray-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
@@ -169,9 +163,8 @@ export default function Asked() {
               </div>
               {/* Arrow */}
               <div
-                className={`transition duration-500 ease ${
-                  openTab === 4 ? "rotate-180 text-red-500" : ""
-                }`}
+                className={`transition duration-500 ease ${openTab === 4 ? "rotate-180 text-red-500" : ""
+                  }`}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
@@ -186,9 +179,8 @@ export default function Asked() {
 
             {/* Tab Inner Content */}
             <div
-              className={`overflow-hidden transition duration-500 ease ${
-                openTab === 4 ? "max-h-screen" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition duration-500 ease ${openTab === 4 ? "max-h-screen" : "max-h-0"
+                }`}
             >
               <p className="py-2 text-justify text-gray-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
