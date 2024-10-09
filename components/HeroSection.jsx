@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
 import TypedText from "./ui/Typing";
 import ImageHero from "@/public/images/illustration-hero.svg";
+import { delay, motion } from "framer-motion";
+import animation from "@/utility/animation";
+import { SlideUp } from "@/utility/animation";
 export default function HeroSection() {
   // const el = useRef(null);
 
@@ -32,14 +36,24 @@ export default function HeroSection() {
               loop={true}
             />
           </h1>
-          <p className="max-w-md mx-auto text-lg text-center text-gray-400 lg:text-2xl lg:text-left lg:mt-0 lg:mx-0">
+          <motion.p
+            variants={SlideUp(0.2)}
+            whileInView={"animate"}
+            initial="initial"
+            className="max-w-md mx-auto text-lg text-center text-gray-400 lg:text-2xl lg:text-left lg:mt-0 lg:mx-0"
+          >
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
-          </p>
+          </motion.p>
 
           {/* Buttons Container */}
-          <div className="flex items-center justify-center w-full space-x-4 lg:justify-start">
+          <motion.div
+            variants={SlideUp(0.2)}
+            whileInView={"animate"}
+            initial="initial"
+            className="flex items-center justify-center w-full space-x-4 lg:justify-start"
+          >
             <a
               href="#"
               className="p-4 text-sm font-semibold text- bg-blue-500 rounded shadow-md text-white  border-2 border-blue-500 hover:bg-white hover:text-blue-500"
@@ -52,10 +66,15 @@ export default function HeroSection() {
             >
               Get it On FireFox
             </a>
-          </div>
+          </motion.div>
         </div>
         {/* Image */}
-        <div className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2"
+        >
           <div className="bg-hero" />
           <Image
             src={ImageHero}
@@ -64,7 +83,7 @@ export default function HeroSection() {
             className="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
             alt=""
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

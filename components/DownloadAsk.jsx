@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+import { SlideRight } from "@/utility/animation";
 export default function DownloadAsk() {
   return (
     <>
@@ -16,11 +19,12 @@ export default function DownloadAsk() {
       </section>
       <section id="download-boxes">
         {/* <!-- Boxes Container --> */}
-        <div
-          className="relative flex flex-col items-center max-w-5xl mx-auto space-y-10 px-10 md:px-6 md:space-y-0 md:space-x-7 md:flex-row"
-        >
+        <div className="relative flex flex-col items-center max-w-5xl mx-auto space-y-10 px-10 md:px-6 md:space-y-0 md:space-x-7 md:flex-row">
           {/* <!-- Box 1 --> */}
-          <div
+          <motion.div
+            variants={SlideRight(0.2)}
+            whileInView={"animate"}
+            initial="initial"
             className="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
           >
             {/* <!-- Image --> */}
@@ -36,16 +40,20 @@ export default function DownloadAsk() {
               <a
                 href="#"
                 className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-blue-500 hover:text-blue-500 hover:bg-white border-softBlue"
-              >Add & Install Extension</a
               >
+                Add & Install Extension
+              </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* <!-- Box 2 --> */}
-          <div className="w-full md:w-1/3">
-            <div
-              className="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:mt-8"
-            >
+          <motion.div
+            variants={SlideRight(0.4)}
+            whileInView={"animate"}
+            initial="initial"
+            className="w-full md:w-1/3"
+          >
+            <div className="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:mt-8">
               {/* <!-- Image --> */}
               <div className="flex justify-center">
                 <img src="images/logo-firefox.svg" alt="" />
@@ -59,17 +67,21 @@ export default function DownloadAsk() {
                 <a
                   href="#"
                   className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-blue-500 hover:text-blue-500     hover:bg-white border-softBlue"
-                >Add & Install Extension</a
                 >
+                  Add & Install Extension
+                </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* <!-- Box 3 --> */}
-          <div className="w-full md:w-1/3">
-            <div
-              className="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:mt-16"
-            >
+          <motion.div
+            variants={SlideRight(0.6)}
+            whileInView={"animate"}
+            initial="initial"
+            className="w-full md:w-1/3"
+          >
+            <div className="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:mt-16">
               {/* <!-- Image --> */}
               <div className="flex justify-center">
                 <img src="images/logo-opera.svg" alt="" />
@@ -83,14 +95,14 @@ export default function DownloadAsk() {
                 <a
                   href="#"
                   className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-blue-500 hover:text-blue-500 hover:bg-white border-softBlue"
-                >Add & Install Extension</a
                 >
+                  Add & Install Extension
+                </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
-
-  )
+  );
 }
