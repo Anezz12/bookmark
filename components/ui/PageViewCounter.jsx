@@ -6,9 +6,13 @@ export default function PageViewCounter() {
 
   useEffect(() => {
     // Increment pageviews on component mount
-    fetch("/api/pageviews", { method: "POST" })
-      .then((res) => res.json())
-      .then((data) => setPageviews(data.pageviews));
+    try {
+      fetch("/api/pageviews", { method: "POST" })
+        .then((res) => res.json())
+        .then((data) => setPageviews(data.pageviews));
+    } catch (error) {
+      console.error("Failed to increment pageviews");
+    }
 
     // Get updated pageviews every 5 seconds
     const interval = setInterval(() => {

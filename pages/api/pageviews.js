@@ -1,3 +1,4 @@
+"use server";
 let pageviews = 0;
 
 export default function handler(req, res) {
